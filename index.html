@@ -129,7 +129,24 @@
 		#copyright a {
 			color: #666
 		}
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute !important;
+			z-index: -1 !important;
+			top: 0;
+			left: 0;
+		}
+
+		.swiper-slide {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	</style>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
 
 	<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 
@@ -138,6 +155,15 @@
 <body>
 
 	<div id="mainDiv">
+		<div class="swiper-container">
+				<div class="swiper-wrapper">
+						<div class="swiper-slide" style="background-image: url('./p1.jpg');"></div>
+						<div class="swiper-slide" style="background-image: url('./p2.jpg');"></div>
+						<div class="swiper-slide" style="background-image: url('./p3.jpg');"></div>
+						<div class="swiper-slide" style="background-image: url('./p4.jpg');"></div>
+						<div class="swiper-slide" style="background-image: url('./p5.jpg');"></div>
+				</div>
+		</div>
 		<div id="content" style="width: 1110px; height: 625px; margin-top: 99px; margin-left: 310px;">
 			<div id="code" style="margin-top: 112.5px;">
 				<span class="comments">/**</span><br>
@@ -183,6 +209,26 @@
 			</div>
 		</div>
 	</div>
+
+	<script>        
+		var mySwiper = new Swiper ('.swiper-container', {
+			autoplay: true,
+			delay:4000,
+			// effect: 'fade',
+			effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+			loop: true, // 循环模式选项
+		})        
+	</script>
 
 	<script type="text/javascript">
 		var $window = $(window),
