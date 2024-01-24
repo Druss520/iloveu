@@ -28,10 +28,11 @@
 		}
 
 		#content {
-			/* width: 100%; */
+			position: absolute;
+			width: 85%;
 			height: 625px;
-			margin-top: 59px;
-			margin-left: 200px;
+			/* margin-top: 59px; */
+			left: 200px;
 			font-size: 28px;
 		}
 
@@ -72,7 +73,7 @@
 		#loveu {
 			padding: 5px;
 			font-size: 22px;
-			margin-top: 80px;
+			/* margin-top: 80px; */
 			margin-right: 120px;
 			text-align: right;
 			display: none
@@ -94,7 +95,7 @@
 			height: 400px;
 			color: #333;
 			font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-			font-size: 12px
+			font-size: 24px
 		}
 
 		#code .string {
@@ -102,7 +103,7 @@
 		}
 
 		#code .keyword {
-			color: #7f0055;
+			color: #db32a3;
 			font-weight: bold
 		}
 
@@ -145,6 +146,7 @@
 			z-index: -1 !important;
 			top: 0;
 			left: 0;
+			overflow: hidden;
 		}
 
 		.swiper-slide {
@@ -199,18 +201,18 @@
 							不惹宝宝生气;<br>
 							<span class="comments">// 每天都好想你.</span><br>
 							想给宝宝做好吃的;<br>
-							<span class="comments">// 想带你去川西.</span><br>
+							<span class="comments">// 想带你去.</span><br>
 							<span class="comments">// 想跟你去看星星看月亮.</span><br>
 							<span class="keyword">小杨</span> 亲亲 <span class="keyword">宝宝</span>;<br>
-							<span class="keyword">宝宝</span> 抱抱 <span class="keyword">小杨</span>;<br>
+							<!-- <span class="keyword">宝宝</span> 抱抱 <span class="keyword">小杨</span>;<br> -->
 							<span class="placeholder"><span class="comments">// 宝宝累了给宝宝捏捏</span><br>
 								<span class="placeholder"><span class="comments">// 给宝宝拍美美哒照片.</span><br>
-									<span class="placeholder">为宝宝做一个最棒的小杨;<br>
+									<span class="placeholder">为宝宝做一个最棒的小杨，;<br>
 										<span class="comments">// 直到永远.</span><br>
 										<br>
 										<br>
 										宝宝:<br>
-										爱你，生日快乐;<br>
+										;<br>
 									</span></span></span></span></span></span></div>
 			<div id="loveHeart">
 				<canvas id="garden" width="670" height="625"></canvas>
@@ -221,8 +223,8 @@
 								class="digit">20</span> minutes <span class="digit">47</span> seconds</div>
 					</div>
 					<div id="loveu" style="display: block;">
-						在一起每一天都要开心幸福呀<br>
-						<div class="signature">生日快乐</div>
+						希望可以在后面多加两个0<br>
+						<div class="signature">Marry Me Please</div>
 					</div>
 				</div>
 			</div>
@@ -388,7 +390,7 @@
 		}
 
 		function adjustCodePosition() {
-			$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
+			$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2 - 100);
 		}
 
 		function showLoveU() {
